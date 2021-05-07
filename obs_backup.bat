@@ -21,7 +21,7 @@ SET DATE_TIME_STRING=%date:~-4%_%date:~3,2%_%date:~0,2%-%time:~0,2%_%time:~3,2%_
 SET "BACKUP_DIR_PATH_DATE=%BACKUP_DIR_PATH%\%DATE_TIME_STRING%_obs_backup"
 
 :: make a backup directory
-::MD "%BACKUP_DIR_PATH_DATE%"
+MD "%BACKUP_DIR_PATH_DATE%"
 
 :: copy files 
 xcopy "%OBS_SETTINGS_PATH%" "%BACKUP_DIR_PATH_DATE%" /E/H/I
