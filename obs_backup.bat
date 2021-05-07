@@ -24,7 +24,7 @@ SET "BACKUP_DIR_PATH_DATE=%BACKUP_DIR_PATH%\%DATE_TIME_STRING%_obs_backup"
 ::MD "%BACKUP_DIR_PATH_DATE%"
 
 :: copy files 
-::xcopy "%OBS_SETTINGS_PATH%" "%BACKUP_DIR_PATH_DATE%" /E/H/I
+xcopy "%OBS_SETTINGS_PATH%" "%BACKUP_DIR_PATH_DATE%" /E/H/I
 
 :: delete old backups
 forfiles -p "%BACKUP_DIR_PATH%" -d -%DELETE_BACKUP_AFTER_DAYS% -c "cmd /c IF @isdir == TRUE rd /S /Q @path"
